@@ -16,6 +16,8 @@
 <script type="text/javascript" src="{$js_path}fileuploader.js"></script>
 <script type="text/javascript" src="{$SITE_PATH}ckeditor/ckeditor.js"></script>
 </head>
+
+
 <!--<div id="fb-root"></div>
 {literal}
 <script>(function(d, s, id) {
@@ -37,6 +39,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 {/literal}-->
 <body>
+<div>Hello this is test for Git</div>
 {include file='location_includes/header.tpl'}
 {include file='location_includes/banner.tpl'}
 {include file='location_includes/nav.tpl'}
@@ -70,7 +73,7 @@
                   <button class="btn btn-default emailGo" type="button" id="checkuser">Go</button>
                   </span> </div>
               </div>
-             {/if} 
+             {/if}
             </div>
             <div class="form-group" id="usercheck_loading"  style="display:none">
               <div class="col-sm-9 col-sm-offset-3">
@@ -140,13 +143,13 @@
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-3 control-label">Description<span class="text-danger">*</span></label>
-                  <div class="col-sm-9"> 
+                  <div class="col-sm-9">
                     <textarea name="NewsDescription" id="NewsDescription">{if $newsArr['NewsDescription'] ne ''}{$newsArr['NewsDescription']}{/if}</textarea>
-                    <script type="text/javascript"> 
-                        CKEDITOR.replace( 'NewsDescription', 
-                         { 
-                            toolbar:'Basic' 
-                        }); 
+                    <script type="text/javascript">
+                        CKEDITOR.replace( 'NewsDescription',
+                         {
+                            toolbar:'Basic'
+                        });
                     </script>
                   </div>
                 </div>
@@ -159,7 +162,7 @@
                        {foreach from=$locationlist key=k item=v}
                          {if $k ne 21}
                           <option value="{$k}" {if $k|in_array:$maparr} selected="selected" {/if}>{$v}</option>
-                         {/if} 
+                         {/if}
                        {/foreach}
                     </select>
                   </div>
@@ -204,9 +207,9 @@
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-3 col-sm-9 text-right" id="uploadimglist">
-                  
+
                   <div id="uploadgallery">
-                  {if $imagelist['Id'][0] ne ''} 
+                  {if $imagelist['Id'][0] ne ''}
                       {section name=data loop=$imagelist['Id']}
                         <div class="uploadImgText">
                          <div class="uploadImg"><a href="#"  data-toggle="modal" data-target="#bigimg" id="uploadedimg-{$imagelist['Id'][data]}"><img src="{$imagelist['Image'][data]}" title="{$imagelist['ImageTitle'][data]}"></a>
@@ -216,11 +219,11 @@
                          </div>
                          <!--<p id="uploadedtxt-{$imagelist['Id'][data]}">{$imagelist['ImageTitle'][data]}</p>-->
                         </div>
-                      {/section}  
+                      {/section}
                   {/if}
                   </div>
-                  
-                    
+
+
                   </div>
                 </div>
                 <div class="form-group">
@@ -244,7 +247,7 @@
                       <button type="button" class="btn btn-danger btnlessgap fullWidth2" id="saveas-draft">Save Draft</button>
                       <button type="button" class="btn btn-danger pull-right fullWidth2" id="saveas-submit">Submit</button>
                     {/if}
-                    
+
                   </div>
                 </div>
             </div>
@@ -329,13 +332,13 @@ $('#element4').popover('hide')
 <script>
 $('#pdffile').change(function(){
 $('#subfile').val($(this).val());
-}); 
+});
 $('#pdffile2').change(function(){
 $('#subfile2').val($(this).val());
-}); 
+});
 $('#pdffile3').change(function(){
 $('#subfile3').val($(this).val());
-}); 
+});
 </script>
 {/literal}
 <script type="text/javascript" src="{$js_path}moment-2.4.0.js"></script>
@@ -353,7 +356,7 @@ $('#subfile3').val($(this).val());
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-	
+
 	ga('create', 'UA-47462200-1', 'eonasdan.github.io');
 	ga('send', 'pageview');
 </script>
